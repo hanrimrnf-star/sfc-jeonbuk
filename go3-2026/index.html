@@ -176,7 +176,7 @@ clip-path:polygon(3% 0,97% 4%,100% 50%,96% 100%,2% 96%,0 50%)}
 .crew .pp:before{content:"";position:absolute;top:-10px;left:50%;translate:-50% 0;width:64px;height:20px;background:rgba(255,225,90,.85);rotate:-4deg}
 .crew .av{width:100%;height:auto;aspect-ratio:1;border-radius:3px;border:0;box-shadow:none;background:linear-gradient(160deg,#dbeeff,#9fd0ff)}
 .crew .av svg{width:46%}
-.crew .av{position:relative;display:block}.crew .av svg{position:absolute;left:27%;top:27%}.crew .av img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 15%}
+.crew .av{position:relative;display:block;height:0!important;padding-bottom:100%;aspect-ratio:auto;overflow:hidden}.crew .av.photo{background:#9a9d9f}.crew .av svg{position:absolute;left:27%;top:27%}.crew .av img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 15%}
 .crew .pp>div:last-child{padding-top:10px;text-align:center}
 .crew .pp b{font-size:18px}.crew .pp span{color:#2d4f80;display:block;font-size:13.5px}
 /* notice: sticky note */
@@ -267,7 +267,7 @@ footer{position:relative;padding-top:30px}
 <h2>함께하는 <em>사람들</em></h2>
 <div class="people">
 <div class="pp"><div class="av"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 2h2v4h4v2h-4v4.2l7 3.8V22H4v-6l7-3.8V8H7V6h4zM10 18v4h4v-4z"/></svg></div><div><small>설교</small><b>박평기 목사</b><span>진성교회</span></div></div>
-<div class="pp"><div class="av"><img src="speaker.jpg" alt="정혜정 간사"></div><div><small>레크리에이션</small><b>정혜정 간사</b><span>교회청소년사역부</span></div></div>
+<div class="pp"><div class="av photo"><img src="speaker.jpg?v=2" alt="정혜정 간사"></div><div><small>레크리에이션</small><b>정혜정 간사</b><span>교회청소년사역부</span></div></div>
 </div>
 </section>
 
