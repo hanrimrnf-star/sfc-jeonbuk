@@ -322,6 +322,10 @@ footer{text-align:center;color:var(--sub);font-size:13px;margin-top:28px}
 <script>
 {
 const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+try{history.scrollRestoration='manual'}catch(e){}
+if(location.hash){try{history.replaceState(null,'',location.pathname+location.search)}catch(e){}}
+scrollTo(0,0);addEventListener('pageshow',()=>scrollTo(0,0));
+document.addEventListener('click',ev=>{const a=ev.target.closest('a[href^="#"]');if(!a)return;const t=document.querySelector(a.getAttribute('href'));if(!t)return;ev.preventDefault();t.scrollIntoView({behavior:reduce?'auto':'smooth',block:'start'})});
 const mark=(sel,cls='',step=0,base=0)=>document.querySelectorAll(sel).forEach((el,i)=>{el.classList.add('rv');if(cls)el.classList.add(cls);el.style.setProperty('--dl',(base+i*step)+'s')});
 mark('.pill','pop');mark('h1 .g3','pop',0,.12);mark('h1 .km','',0,.3);mark('.slogan','pop',0,.5);mark('.verse','',0,.6);mark('.ticket','',0,.75);mark('.stamp');mark('.hero .cta','',0,.9);
 mark('main>section');mark('.row','',.06,.1);mark('.badge','pop',.15,.15);mark('.list li','',.12,.15);mark('.gate','',.1,.1);mark('.gift .box','pop',0,.3);mark('.next .globe','pop',0,.3);
