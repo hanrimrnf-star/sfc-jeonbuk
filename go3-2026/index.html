@@ -33,7 +33,7 @@ background:linear-gradient(180deg,var(--sky) 0,#8fd0fb 70vh,var(--pale) 140vh,va
 .hero{position:relative;min-height:100svh;display:flex;flex-direction:column;justify-content:center;padding:40px 0 60px;text-align:center;color:#fff}
 .pill{display:inline-block;align-self:center;background:var(--navy);color:#fff;font-size:15px;padding:7px 16px 6px;border-radius:999px;position:relative}
 h1{margin:18px 0 0;line-height:.9;position:relative}
-h1 .g3{display:block;font-size:clamp(110px,34vw,170px);color:#fff;text-shadow:0 10px 0 rgba(11,42,91,.12)}
+h1 .g3{display:block;font-size:clamp(110px,34vw,170px);color:#fff;text-shadow:0 4px 0 rgba(11,42,91,.10),0 18px 36px rgba(11,42,91,.12)}
 h1 .km{display:block;font-size:clamp(68px,21vw,108px);color:var(--navy);margin-top:6px}
 .slogan{margin:22px auto 0;font-size:clamp(19px,5.4vw,24px);color:var(--navy);display:inline-block;padding:4px 12px 2px;background:var(--yel);border-radius:6px;rotate:-1.5deg}
 .verse{margin:16px 0 0;font-size:14.5px;color:#fff;font-weight:500;text-shadow:0 1px 0 rgba(11,42,91,.2);position:relative}
@@ -55,7 +55,7 @@ box-shadow:0 22px 40px rgba(11,42,91,.25);text-align:left;position:relative;over
 .t-stub{border-left:2px dashed var(--line);background:var(--navy);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:space-between;padding:16px 8px}
 .notch{position:absolute;right:82px;width:22px;height:22px;border-radius:50%;background:#7cc6f9;z-index:2}
 .t-stub .seat{font-size:12px;text-align:center;line-height:1.3;color:#c9dbf5}
-.t-stub .seat b{display:block;font-size:22px;color:var(--yel)}
+.t-stub .seat b{display:block;font-size:22px;color:var(--yel)}.t-stub .seat span{display:block;font-size:14px;color:#fff;margin-top:4px;letter-spacing:0}
 .bars{width:56px;height:64px;background:repeating-linear-gradient(90deg,#fff 0 2px,transparent 2px 4px,#fff 4px 5px,transparent 5px 8px,#fff 8px 11px,transparent 11px 12px)}
 .stamp{position:absolute;right:106px;top:30px;border:2.5px solid #e2483d;color:#e2483d;font-size:13px;padding:4px 8px 2px;border-radius:8px;rotate:-12deg;opacity:.85;background:rgba(255,255,255,.7)}
 .hero .cta{margin-top:22px;position:relative}
@@ -88,21 +88,22 @@ p{margin:0 0 10px}
 .mail{padding:7px;background:repeating-linear-gradient(-45deg,var(--sky) 0 14px,#fff 14px 22px,var(--navy) 22px 36px,#fff 36px 44px)}
 .mail .in{border-radius:14px;padding:22px 16px 20px;background:#fff;position:relative}
 .mail .sign{margin:14px 0 0;font-size:18px;color:var(--navy)}
-.postmark{position:absolute;right:12px;top:14px;width:66px;height:66px;border:2px solid #9bbbe0;border-radius:50%;display:grid;place-items:center;text-align:center;font-size:10.5px;line-height:1.25;color:#7c9ccb;rotate:12deg}
+.signrow{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:10px}.signrow .sign{margin:0}
+.postmark{flex:none;width:66px;height:66px;border:2px solid #9bbbe0;border-radius:50%;display:grid;place-items:center;text-align:center;font-size:10.5px;line-height:1.25;color:#7c9ccb;rotate:12deg}
 .postmark b{display:block;font-size:15px}
-.mail .kick,.mail h2{padding-right:70px}
+
 /* departures board */
 .board{background:var(--navy);color:#fff}
 .board .kick{color:var(--yel)}
-.board h2 em{background:linear-gradient(transparent 62%,rgba(255,225,90,.45) 62%)}
+.board h2 em{background:linear-gradient(transparent 86%,var(--yel) 86%)}
 .row{display:grid;grid-template-columns:100px minmax(0,1fr);gap:12px;padding:13px 0;border-top:1px solid rgba(255,255,255,.12)}
 .board h2+.row{border-top:0}
 .flip{display:flex;gap:2px;perspective:300px}
 .flip i{font-style:normal;width:20px;height:30px;display:grid;place-items:center;background:#06193a;color:#ffd84a;border-radius:4px;font-size:19px;position:relative}
 .flip i:after{content:"";position:absolute;left:0;right:0;top:50%;border-top:1px solid rgba(0,0,0,.6)}
 .flip i.c{width:8px;background:none}.flip i.c:after{display:none}
-.row small{display:block;font-size:12.5px;color:#9fb8de;margin-top:4px}
-.row b{display:block;font-size:17px}
+.row small{display:block;font-size:12.5px;color:#9fb8de;margin-top:5px;padding-left:2px}
+.row b{display:block;font-size:17px;line-height:30px}
 .row p{margin:2px 0 0;color:#c9dbf5;font-size:14.5px}
 .row.hl b{color:var(--yel)}
 .state{display:inline-block;margin-left:6px;font-size:11.5px;font-weight:700;padding:1px 7px;border-radius:5px;background:var(--yel);color:var(--navy);vertical-align:2px}
@@ -129,7 +130,7 @@ p{margin:0 0 10px}
 .gift .kick{color:var(--navy)}
 .gift h2 em{background:linear-gradient(transparent 62%,#fff 62%)}
 .gift .box{position:absolute;right:-6px;bottom:-10px;width:118px}
-.txt{position:relative;padding-right:96px}
+.txt{position:relative}.gift .txt p:last-child{padding-right:104px}.next .txt p{padding-right:84px}
 /* gates */
 .gate{border:1px solid var(--line);border-radius:16px;overflow:hidden;margin-top:14px}
 .gate-h{display:flex;align-items:center;gap:12px;padding:12px 14px;background:var(--pale)}
@@ -146,7 +147,7 @@ p{margin:0 0 10px}
 .share img{display:block;width:76%;max-width:330px;margin:6px auto 18px;border-radius:12px;box-shadow:0 16px 30px rgba(11,42,91,.22);rotate:-2deg}
 .next{overflow:hidden;background:linear-gradient(160deg,#fff 45%,var(--pale))}
 .next .globe{position:absolute;right:-8px;bottom:-8px;width:128px}
-.next .txt{padding-right:104px}
+
 .desk{background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap}
 .desk .kick{color:var(--yel)}
 .desk b{display:block;font-size:19px}
@@ -159,7 +160,7 @@ footer{text-align:center;color:var(--sub);font-size:13px;margin-top:28px}
 .prog i{position:absolute;left:0;top:0;height:4px;width:var(--p,0%);background:var(--yel)}
 .prog svg{position:absolute;top:-7px;left:calc(var(--p,0%) - 14px);width:20px;height:20px}
 @media(max-width:370px){.ticket{grid-template-columns:minmax(0,1fr) 76px}.notch{right:66px}.route b{font-size:25px}.stamp{right:88px;top:32px;font-size:12px}.t-title{font-size:26px}
-.txt,.next .txt{padding-right:0;padding-bottom:96px}}
+.gift .txt p:last-child,.next .txt p{padding-right:0}.txt{padding-bottom:96px}}
 /* motion */
 .js .rv{opacity:0;transform:translateY(34px);transition:opacity .7s ease var(--dl,0s),transform .8s cubic-bezier(.2,.8,.2,1) var(--dl,0s)}
 .js .rv.in{opacity:1;transform:none}
@@ -205,7 +206,7 @@ footer{text-align:center;color:var(--sub);font-size:13px;margin-top:28px}
 <div class="full"><small>장소</small><b>점심 루오모 → 큰모임 진성교회</b></div>
 </div>
 </div>
-<div class="t-stub"><div class="seat"><b class="d">고3</b></div><div class="bars" aria-hidden="true"></div></div>
+<div class="t-stub"><div class="seat"><b class="d">고3</b><span class="d">11.28</span></div><div class="bars" aria-hidden="true"></div></div>
 <div class="stamp d">초대합니다</div>
 </div>
 
@@ -219,13 +220,12 @@ footer{text-align:center;color:var(--sub);font-size:13px;margin-top:28px}
 </div></div>
 
 <section class="mail" id="hello"><div class="in">
-<div class="postmark d" aria-hidden="true"><div>전북 SFC<b>11.28</b>2026</div></div>
 <div class="kick"><svg viewBox="0 0 24 24"><use href="#pl"/></svg>고3 친구들에게</div>
 <h2 class="d">수능 끝난 너에게, <em>수고했어!</em></h2>
 <p class="lead">수능을 마친 예비 대학생들을 위해 특별한 시간을 준비했습니다!</p>
 <p>그동안 입시를 위해 쉼 없이 달려온 고3 여러분을 초대합니다. 맛있는 식사와 즐거운 교제를 나누고, 특별한 선물도 함께 전달할 예정입니다.</p>
 <p>그동안의 수고를 격려하고 새로운 시작을 응원하는 자리인 만큼, 부담 없이 오셔서 함께 즐거운 시간을 보내시길 바랍니다!</p>
-<p class="sign d">많은 관심과 참여 부탁드립니다!</p>
+<div class="signrow"><p class="sign d">많은 관심과 참여 부탁드립니다!</p><div class="postmark d" aria-hidden="true"><div>전북 SFC<b>11.28</b>2026</div></div></div>
 </div></section>
 
 <section class="board" id="time">
