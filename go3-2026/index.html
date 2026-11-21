@@ -36,7 +36,7 @@ h1{margin:18px 0 0;line-height:.9;position:relative}
 h1 .g3{display:block;font-size:clamp(110px,34vw,170px);color:#fff;text-shadow:0 4px 0 rgba(11,42,91,.10),0 18px 36px rgba(11,42,91,.12)}
 h1 .km{display:block;font-size:clamp(68px,21vw,108px);color:var(--navy);margin-top:6px}
 .slogan{margin:22px auto 0;font-size:clamp(19px,5.4vw,24px);color:var(--navy);display:inline-block;padding:4px 12px 2px;background:var(--yel);border-radius:6px;rotate:-1.5deg}
-.verse{margin:16px 0 0;font-size:14.5px;color:#fff;font-weight:500;text-shadow:0 1px 0 rgba(11,42,91,.2);position:relative}
+.verse{text-wrap:balance;margin:16px auto 0;max-width:30em;font-size:14.5px;color:var(--navy);font-weight:500;position:relative}
 .plane{position:absolute;width:86px;right:4%;top:9%;filter:drop-shadow(0 8px 10px rgba(11,42,91,.25))}
 /* ticket */
 .ticket{margin:34px 0 0;display:grid;grid-template-columns:minmax(0,1fr) 92px;background:var(--paper);color:var(--ink);border-radius:18px;
@@ -57,7 +57,7 @@ box-shadow:0 22px 40px rgba(11,42,91,.25);text-align:left;position:relative;over
 .t-stub .seat{font-size:12px;text-align:center;line-height:1.3;color:#c9dbf5}
 .t-stub .seat b{display:block;font-size:22px;color:var(--yel)}.t-stub .seat span{display:block;font-size:14px;color:#fff;margin-top:4px;letter-spacing:0}
 .bars{width:56px;height:64px;background:repeating-linear-gradient(90deg,#fff 0 2px,transparent 2px 4px,#fff 4px 5px,transparent 5px 8px,#fff 8px 11px,transparent 11px 12px)}
-.stamp{position:absolute;right:106px;top:30px;border:2.5px solid #e2483d;color:#e2483d;font-size:13px;padding:4px 8px 2px;border-radius:8px;rotate:-12deg;opacity:.85;background:rgba(255,255,255,.7)}
+.stamp{position:absolute;right:106px;top:30px;border:2.5px solid #cf3a2f;color:#cf3a2f;font-size:13px;padding:4px 8px 2px;border-radius:8px;rotate:-12deg;opacity:.85;background:rgba(255,255,255,.7)}
 .hero .cta{margin-top:22px;position:relative}
 .cue{position:absolute;left:50%;bottom:14px;translate:-50% 0;color:#fff}
 .cue svg{width:28px;display:block;animation:bob 1.6s ease-in-out infinite}
@@ -69,6 +69,14 @@ text-decoration:none;cursor:pointer;background:var(--navy);color:#fff}
 .btn.y{background:var(--yel);color:var(--navy)}.btn.w{background:#fff;color:var(--navy)}
 .btn:focus-visible{outline:3px solid var(--yel);outline-offset:2px}
 .left{justify-content:flex-start}
+::selection{background:var(--yel);color:var(--navy)}
+a,button{-webkit-tap-highlight-color:transparent}
+a:focus-visible,.cue:focus-visible{outline:3px solid #136bb8;outline-offset:3px;border-radius:10px}
+.board :focus-visible,.desk :focus-visible{outline-color:var(--yel)}
+.btn{transition:transform .15s ease-out,box-shadow .15s ease-out,filter .15s}
+@media(hover:hover){.btn:hover{transform:translateY(-1px);box-shadow:0 6px 14px rgba(11,42,91,.18);filter:brightness(1.05)}.gate a.map:hover img{filter:saturate(1.1)}}
+.btn:active{transform:translateY(1px);box-shadow:none}
+.t-grid b,.gate-h time,.row small,.tel,.flip{font-variant-numeric:tabular-nums}
 /* ticker */
 .tick{margin:0 calc(50% - 50vw);background:var(--navy);color:#fff;overflow:hidden;padding:13px 0 11px}
 .tick div{display:flex;width:max-content;animation:tk 26s linear infinite;font-size:17px;white-space:nowrap}
@@ -78,7 +86,7 @@ text-decoration:none;cursor:pointer;background:var(--navy);color:#fff}
 @keyframes tk{to{transform:translateX(-50%)}}
 /* cards: one system */
 section{background:var(--paper);border-radius:20px;padding:24px 20px;margin-top:20px;box-shadow:0 10px 28px rgba(11,42,91,.08);position:relative}
-.kick{display:flex;align-items:center;gap:8px;font-size:14px;font-weight:700;color:#1b86e0;margin-bottom:6px;position:relative}
+.kick{display:flex;align-items:center;gap:8px;font-size:14px;font-weight:700;color:#136bb8;margin-bottom:6px;position:relative}
 .kick svg{width:18px;height:18px;flex:none}
 h2{font-size:26px;line-height:1.25;margin:0 0 14px;text-wrap:balance;position:relative}
 h2 em{font-style:normal;background:linear-gradient(transparent 62%,var(--yel) 62%)}
@@ -89,7 +97,7 @@ p{margin:0 0 10px}
 .mail .in{border-radius:14px;padding:22px 16px 20px;background:#fff;position:relative}
 .mail .sign{margin:14px 0 0;font-size:18px;color:var(--navy)}
 .signrow{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:10px}.signrow .sign{margin:0}
-.postmark{flex:none;width:66px;height:66px;border:2px solid #9bbbe0;border-radius:50%;display:grid;place-items:center;text-align:center;font-size:10.5px;line-height:1.25;color:#7c9ccb;rotate:12deg}
+.postmark{flex:none;width:66px;height:66px;border:2px solid #8fb0dc;border-radius:50%;display:grid;place-items:center;text-align:center;font-size:10.5px;line-height:1.25;color:#5f82b8;rotate:12deg}
 .postmark b{display:block;font-size:15px}
 
 /* departures board */
@@ -144,7 +152,7 @@ p{margin:0 0 10px}
 .gate .body p{font-size:14.5px;color:var(--sub)}
 /* share, next, desk */
 .share{text-align:center}
-.share img{display:block;width:76%;max-width:330px;margin:6px auto 18px;border-radius:12px;box-shadow:0 16px 30px rgba(11,42,91,.22);rotate:-2deg}
+.share img{display:block;height:auto;width:76%;max-width:330px;margin:6px auto 18px;border-radius:12px;box-shadow:0 16px 30px rgba(11,42,91,.22);rotate:-2deg}
 .next{overflow:hidden;background:linear-gradient(160deg,#fff 45%,var(--pale))}
 .next .globe{position:absolute;right:-8px;bottom:-8px;width:128px}
 
@@ -192,7 +200,7 @@ footer{text-align:center;color:var(--sub);font-size:13px;margin-top:28px}
 <span class="pill d">전북지방 SFC</span>
 <h1 class="d"><span class="g3">고3</span><span class="km">큰모임</span></h1>
 <div><span class="slogan d">새로운 시작, 함께 걸어가는 동행</span></div>
-<p class="verse">“너의 길을 여호와께 맡기라 그를 의지하면 그가 이루시고” (시편 37:5)</p>
+<p class="verse">“너의 길을 여호와께 맡기라 그를 의지하면 그가 이루시고” <span style="white-space:nowrap">(시편 37:5)</span></p>
 
 <div class="ticket" role="group" aria-label="행사 안내">
 <span class="notch" style="top:-11px" aria-hidden="true"></span><span class="notch" style="bottom:-11px" aria-hidden="true"></span>
@@ -273,13 +281,13 @@ footer{text-align:center;color:var(--sub);font-size:13px;margin-top:28px}
 <h2 class="d">오시는 <em>길</em></h2>
 <div class="gate">
 <div class="gate-h"><div class="gno d"><small>장소</small>1</div><div><b class="d">루오모</b><span>점심 식사</span></div><time class="d">12:00</time></div>
-<a class="map" href="https://map.naver.com/p/entry/place/2077881968"><img src="map-luomo.jpg" alt="루오모 위치 지도: 전주 만성지구, 양현초등학교 근처"></a>
+<a class="map" href="https://map.naver.com/p/entry/place/2077881968"><img src="map-luomo.jpg" width="1100" height="959" loading="lazy" decoding="async" alt="루오모 위치 지도: 전주 만성지구, 양현초등학교 근처"></a>
 <div class="body"><p>전주 만성지구, 양현초등학교 근처에 있어요. 여기서 먼저 만나 함께 점심을 먹어요.</p>
 <div class="cta left"><a class="btn" href="https://map.naver.com/p/entry/place/2077881968">네이버 지도</a><a class="btn y" href="https://map.kakao.com/?q=%EC%A0%84%EC%A3%BC%20%EB%A3%A8%EC%98%A4%EB%AA%A8">카카오맵</a></div></div>
 </div>
 <div class="gate">
 <div class="gate-h"><div class="gno d"><small>장소</small>2</div><div><b class="d">진성교회</b><span>고3 큰모임</span></div><time class="d">14:00</time></div>
-<a class="map" href="https://map.naver.com/p/search/%EC%A0%84%EC%A3%BC%20%EC%A7%84%EC%84%B1%EA%B5%90%ED%9A%8C"><img src="map.jpg" alt="진성교회 위치 지도: 전주월드컵경기장과 시외버스정류장 인근"></a>
+<a class="map" href="https://map.naver.com/p/search/%EC%A0%84%EC%A3%BC%20%EC%A7%84%EC%84%B1%EA%B5%90%ED%9A%8C"><img src="map.jpg" width="1100" height="648" loading="lazy" decoding="async" alt="진성교회 위치 지도: 전주월드컵경기장과 시외버스정류장 인근"></a>
 <div class="body"><p>전주월드컵경기장 맞은편, 시외버스정류장 근처에 있어요.</p>
 <div class="cta left"><a class="btn" href="https://map.naver.com/p/search/%EC%A0%84%EC%A3%BC%20%EC%A7%84%EC%84%B1%EA%B5%90%ED%9A%8C">네이버 지도</a><a class="btn y" href="https://map.kakao.com/?q=%EC%A0%84%EC%A3%BC%20%EC%A7%84%EC%84%B1%EA%B5%90%ED%9A%8C">카카오맵</a></div></div>
 </div>
@@ -288,7 +296,7 @@ footer{text-align:center;color:var(--sub);font-size:13px;margin-top:28px}
 <section class="share">
 <div class="kick" style="justify-content:center"><svg viewBox="0 0 24 24"><use href="#pl"/></svg>친구도 데려와!</div>
 <h2 class="d">친구한테 <em>공유하기</em></h2>
-<img src="poster.jpg" alt="전북지방 SFC 고3 큰모임 포스터">
+<img src="poster.jpg" width="1000" height="1500" loading="lazy" decoding="async" alt="전북지방 SFC 고3 큰모임 포스터">
 <button class="btn" id="copy" type="button">링크 복사</button>
 </section>
 
